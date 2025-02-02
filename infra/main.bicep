@@ -17,9 +17,21 @@ param location string
 var tags = {
   'azd-env-name': environmentName
 }
+var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
 
 resource rg 'Microsoft.Resources/resourceGroups@2022-09-01' = {
   name: 'rg-${environmentName}'
   location: location
   tags: tags
+}
+
+module trafficmgr './trafficmgr.bicep' = {
+  name: 'resources'
+  scope: rg
+  params: {
+    uniqueDnsName: 'tmlab-${resourceToken}'
+    location: location
+    tags: tags
+    environmentName: environmentName
+  }
 }
