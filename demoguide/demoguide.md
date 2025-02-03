@@ -30,13 +30,13 @@ This scenario deploys 3 identical Azure App Services websites, across 3 differen
 * TMLABWebApp-%region% - Azure App Service with static HTML webpage in each region
 * TMProfile - Traffic Manager Profile with endpoints
 
-<img src="../demoguide/TM/ResourceGroup_Overview.png" alt="Traffic Manager Resource Group" style="width:70%;">
+<img src="https://raw.githubusercontent.com/petender/azd-trafficmgr/refs/heads/main/demoguide/TM/ResourceGroup_Overview.png" alt="Traffic Manager Resource Group" style="width:70%;">
 <br></br>
 
-<img src="../demoguide/TM/TrafficMgr_Profile.png" alt="Traffic Manager Profile with Endpoints" style="width:70%;">
+<img src="https://raw.githubusercontent.com/petender/azd-trafficmgr/refs/heads/main/demoguide/TM/TrafficMgr_Profile.png" alt="Traffic Manager Profile with Endpoints" style="width:70%;">
 <br></br>
 
-<img src="../demoguide/TM/TrafficMgr_WebApp.png" alt="Sample WebApp" style="width:70%;">
+<img src="https://raw.githubusercontent.com/petender/azd-trafficmgr/refs/heads/main/demoguide/TM/TrafficMgr_WebApp.png" alt="Sample WebApp" style="width:70%;">
 <br></br>
 
 ### 2. What can I demo from this scenario after deployment
@@ -47,7 +47,7 @@ This scenario deploys 3 identical Azure App Services websites, across 3 differen
 1. Navigate to the **Traffic Manager Profile**, highlighting the 3 different endpoints. Open one of the endpoints and emphasize the region it points to
 1. Browse to the Traffic Manager URL using its DNS Name property (https://tmlabxyz.trafficmanager.net). As there is no TLS certificate configured for the website, nor the Traffic Mgr load balancer, it will throw an error.
 
-<img src="../demoguide/TM/TrafficMgr_Browser_Error.png" alt="Sample WebApp" style="width:70%;">
+<img src="https://raw.githubusercontent.com/petender/azd-trafficmgr/refs/heads/main/demoguide/TM/TrafficMgr_Browser_Error.png" alt="Traffic Manager URL Browser Certificate Error" style="width:70%;">
 <br></br>
 
 1. From the Browser error appearing, click **Continue to... (not recommended)**
@@ -57,12 +57,12 @@ This scenario deploys 3 identical Azure App Services websites, across 3 differen
 1. Stop the App Service
 1. Once stopped, navigate to the tmlabwebapp-centralUS web page; refresh the page and confirm it shows stopped.
 
-<img src="../demoguide/TM/WebApp_Stopped.png" alt="Sample WebApp" style="width:70%;">
+<img src="https://raw.githubusercontent.com/petender/azd-trafficmgr/refs/heads/main/demoguide/TM/WebApp_Stopped.png" alt="WebApp Is Stopped" style="width:70%;">
 <br></br>
 
 1. Switch back to the Traffic Manager Profile, and confirm (or refresh until...) the **Endpoint 0** shows a state of **Degraded**
 
-<img src="../demoguide/TM/TrafficMgr_Endpoint_Degraded.png" alt="Sample WebApp" style="width:70%;">
+<img src="https://raw.githubusercontent.com/petender/azd-trafficmgr/refs/heads/main/demoguide/TM/TrafficMgr_Endpoint_Degraded.png" alt="Traffic Mgr Endpoint Degraded" style="width:70%;">
 <br></br>
 
 1. From the Browser, navigate back to the tmlabxyz.trafficmanager.net URL. Note you will get the same https certificate error. Click continue to open the web page.
