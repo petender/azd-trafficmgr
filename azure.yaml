@@ -1,3 +1,7 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
 name: azd-trafficmgr
+metadata:
+  template: azd-trafficmgr@0.0.1-beta
+infra:
+   provider: "bicep"
